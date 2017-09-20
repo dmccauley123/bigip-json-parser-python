@@ -1,0 +1,3849 @@
+analytics gui-widget /Common/uwid58d2fa8e8e73e {
+    app-service none
+    cent-report-destination-id none
+    cent-report-destination-type self
+    drilldown-entities none
+    drilldown-values none
+    entity-show-count 10
+    gui-pagecode _ov_summary
+    metrics { events_count }
+    module asm
+    order-on-page 0
+    period 86400
+    username admin
+    view-by asm_repev_request_type
+    widget-type 3
+}
+analytics gui-widget /Common/uwid58d2fa8e9ce7b {
+    app-service none
+    cent-report-destination-id none
+    cent-report-destination-type self
+    drilldown-entities none
+    drilldown-values none
+    entity-show-count 10
+    gui-pagecode _ov_summary
+    metrics { acl_matches }
+    module network
+    order-on-page 3
+    period 86400
+    username admin
+    view-by acl_enforced_rule
+    widget-type 3
+}
+analytics gui-widget /Common/uwid58d2fa8e83f5c {
+    app-service none
+    cent-report-destination-id none
+    cent-report-destination-type self
+    drilldown-entities none
+    drilldown-values none
+    entity-show-count 10
+    gui-pagecode _ov_summary
+    metrics { events_count }
+    module asm
+    order-on-page 0
+    period 86400
+    username admin
+    view-by asm_repev_request_type
+    widget-type 1
+}
+analytics gui-widget /Common/uwid58d2fa8e935e3 {
+    app-service none
+    cent-report-destination-id none
+    cent-report-destination-type self
+    drilldown-entities none
+    drilldown-values none
+    entity-show-count 10
+    gui-pagecode _ov_summary
+    metrics { count }
+    module dns
+    order-on-page 1
+    period 86400
+    username admin
+    view-by dns_query_name
+    widget-type 3
+}
+analytics gui-widget /Common/uwid58d2fa8e89301 {
+    app-service none
+    cent-report-destination-id none
+    cent-report-destination-type self
+    drilldown-entities none
+    drilldown-values none
+    entity-show-count 10
+    gui-pagecode _ov_summary
+    metrics { count }
+    module dosl7
+    order-on-page 1
+    period 86400
+    username admin
+    view-by vip
+    widget-type 1
+}
+analytics gui-widget /Common/uwid58d2fa8e98359 {
+    app-service none
+    cent-report-destination-id none
+    cent-report-destination-type self
+    drilldown-entities none
+    drilldown-values none
+    entity-show-count 10
+    gui-pagecode _ov_summary
+    metrics { count drop_count total_count }
+    module dosl3
+    order-on-page 2
+    period 86400
+    username admin
+    view-by dosl3_action
+    widget-type 2
+}
+analytics gui-widget /Common/uwid58d2fa8ea186d {
+    app-service none
+    cent-report-destination-id none
+    cent-report-destination-type self
+    drilldown-entities none
+    drilldown-values none
+    entity-show-count 10
+    gui-pagecode _ov_summary
+    metrics { errors }
+    module network
+    order-on-page 4
+    period 86400
+    username admin
+    view-by fw_error_reason
+    widget-type 3
+}
+analytics gui-widget /Common/uwid58d2fa8ea6314 {
+    app-service none
+    cent-report-destination-id none
+    cent-report-destination-type self
+    drilldown-entities none
+    drilldown-values none
+    entity-show-count 10
+    gui-pagecode _ov_summary
+    metrics { drop_count }
+    module dosl3
+    order-on-page 5
+    period 86400
+    username admin
+    view-by dosl3_attack_id
+    widget-type 3
+}
+analytics gui-widget /Common/uwid58d2fa8eaac50 {
+    app-service none
+    cent-report-destination-id none
+    cent-report-destination-type self
+    drilldown-entities none
+    drilldown-values none
+    entity-show-count 10
+    gui-pagecode _ov_summary
+    metrics { count }
+    module dosl7
+    order-on-page 6
+    period 86400
+    username admin
+    view-by dosl7_attack_id
+    widget-type 3
+}
+analytics gui-widget /Common/uwid58d2fa8eaf729 {
+    app-service none
+    cent-report-destination-id none
+    cent-report-destination-type none
+    drilldown-entities none
+    drilldown-values none
+    entity-show-count 10
+    gui-pagecode _ov_summary
+    metrics { __ }
+    module _______xxx___
+    order-on-page 0
+    period 0
+    username admin
+    view-by __
+    widget-type 1
+}
+apm aaa radius ise-server {
+    acct-port radius-acct
+    address 10.192.86.159
+    app-service none
+    auth-port radius
+    description none
+    location-specific true
+    mode auth
+    nas-identifier none
+    nas-ip-address any6
+    nas-ipv6-address any6
+    partition Common
+    pool none
+    radius-charset cp1252
+    retries 3
+    secret $M$RT$uIt6u4RLYvRTXfmBHaAb6Q==
+    service-type default
+    timeout 5
+    use-pool disabled
+}
+apm aaa radius ise-server-authc-authz {
+    acct-port radius-acct
+    address 10.192.86.159
+    app-service none
+    auth-port radius
+    description none
+    location-specific true
+    mode both
+    nas-identifier none
+    nas-ip-address any6
+    nas-ipv6-address any6
+    partition Common
+    pool none
+    radius-charset cp1252
+    retries 3
+    secret $M$rQ$0yhTmwYCoqixgyfZr0dt0w==
+    service-type login
+    timeout 5
+    use-pool disabled
+}
+apm apm-avr-config apm-avr-config {
+    app-service none
+    avr-collect-data true
+    avr-sampling true
+    partition Common
+}
+apm policy access-policy test-apm-ise-profile {
+    app-service none
+    caption none
+    default-ending test-apm-ise-profile_end_deny
+    items {
+        test-apm-ise-profile_act_external_logon_page {
+            priority 0
+        }
+        test-apm-ise-profile_act_irule_event {
+            priority 0
+        }
+        test-apm-ise-profile_act_logon_page {
+            priority 0
+        }
+        test-apm-ise-profile_act_radius_auth {
+            priority 0
+        }
+        test-apm-ise-profile_end_allow {
+            priority 0
+        }
+        test-apm-ise-profile_end_deny {
+            priority 0
+        }
+        test-apm-ise-profile_ent {
+            priority 0
+        }
+    }
+    macros none
+    max-macro-loop-count 1
+    partition Common
+    start-item test-apm-ise-profile_ent
+    subroutine-properties none
+    type access-policy
+}
+apm policy agent aaa-radius test-apm-ise-profile_act_radius_auth_ag {
+    app-service none
+    max-logon-attempt 3
+    partition Common
+    server ise-server-authc-authz
+    show-extended-error true
+}
+apm policy agent ending-allow test-apm-ise-profile_end_allow_ag {
+    app-service none
+    partition Common
+}
+apm policy agent ending-deny test-apm-ise-profile_end_deny_ag {
+    app-service none
+    customization-group test-apm-ise-profile_end_deny_ag
+    partition Common
+}
+apm policy agent external-logon-page test-apm-ise-profile_act_external_logon_page_ag {
+    app-service none
+    partition Common
+    split-username false
+    uri "%{session.custom.ise_redirect}"
+}
+apm policy agent irule-event test-apm-ise-profile_act_irule_event_ag {
+    app-service none
+    id ISE_ATTR
+    partition Common
+}
+apm policy agent logon-page test-apm-ise-profile_act_logon_page_ag {
+    aaa-captcha-configuration none
+    app-service none
+    basic-auth-realm none
+    citrix-client-auth-type domain-only
+    customization-group test-apm-ise-profile_act_logon_page_ag
+    field-modifiable1 true
+    field-modifiable2 true
+    field-modifiable3 true
+    field-modifiable4 true
+    field-modifiable5 true
+    field-type2 password
+    field-type3 none
+    field-type4 none
+    field-type5 none
+    fieldtype1 text
+    http-401-auth-level none
+    partition Common
+    post-var-name1 username
+    post-var-name2 password
+    post-var-name3 field3
+    post-var-name4 field4
+    post-var-name5 field5
+    selectvalues1 none
+    selectvalues2 none
+    selectvalues3 none
+    selectvalues4 none
+    selectvalues5 none
+    sess-var-name1 username
+    sess-var-name2 password
+    sess-var-name3 field3
+    sess-var-name4 field4
+    sess-var-name5 field5
+    split-username false
+    type form-based
+    vmware-view-auth-label none
+    vmware-view-domains none
+    vmware-view-logon-screen windows-password
+}
+apm policy customization-group test-apm-ise-profile_act_logon_page_ag {
+    app-service none
+    checksum SHA1:1714:5e00b4efec9fea43a457946f1ce4d9384a137b67
+    create-time 2017-04-27:09:55:29
+    created-by admin
+    images none
+    last-update-time 2017-04-27:09:55:35
+    local-path none
+    mode 33188
+    partition Common
+    revision 2
+    size 1714
+    templates none
+    type logon
+    updated-by admin
+}
+apm policy customization-group test-apm-ise-profile_end_deny_ag {
+    app-service none
+    checksum SHA1:62:fd61541c1097d460e42c50904684def2794ba70d
+    create-time 2017-04-27:09:54:44
+    created-by admin
+    images none
+    last-update-time 2017-04-27:09:54:44
+    local-path none
+    mode 33188
+    partition Common
+    revision 1
+    size 62
+    templates none
+    type logout
+    updated-by admin
+}
+apm policy customization-group test-apm-ise-profile_eps {
+    app-service none
+    checksum SHA1:62:fd61541c1097d460e42c50904684def2794ba70d
+    create-time 2017-04-27:09:54:44
+    created-by admin
+    images none
+    last-update-time 2017-04-27:09:54:44
+    local-path none
+    mode 33188
+    partition Common
+    revision 1
+    size 62
+    templates none
+    type eps
+    updated-by admin
+}
+apm policy customization-group test-apm-ise-profile_errormap {
+    app-service none
+    checksum SHA1:62:fd61541c1097d460e42c50904684def2794ba70d
+    create-time 2017-04-27:09:54:44
+    created-by admin
+    images none
+    last-update-time 2017-04-27:09:54:44
+    local-path none
+    mode 33188
+    partition Common
+    revision 1
+    size 62
+    templates none
+    type errormap
+    updated-by admin
+}
+apm policy customization-group test-apm-ise-profile_frameworkinstallation {
+    app-service none
+    checksum SHA1:62:fd61541c1097d460e42c50904684def2794ba70d
+    create-time 2017-04-27:09:54:44
+    created-by admin
+    images none
+    last-update-time 2017-04-27:09:54:44
+    local-path none
+    mode 33188
+    partition Common
+    revision 1
+    size 62
+    templates none
+    type framework-installation
+    updated-by admin
+}
+apm policy customization-group test-apm-ise-profile_general_ui {
+    app-service none
+    checksum SHA1:62:fd61541c1097d460e42c50904684def2794ba70d
+    create-time 2017-04-27:09:54:44
+    created-by admin
+    images none
+    last-update-time 2017-04-27:09:54:44
+    local-path none
+    mode 33188
+    partition Common
+    revision 1
+    size 62
+    templates none
+    type general-ui
+    updated-by admin
+}
+apm policy customization-group test-apm-ise-profile_logout {
+    app-service none
+    checksum SHA1:62:fd61541c1097d460e42c50904684def2794ba70d
+    create-time 2017-04-27:09:54:44
+    created-by admin
+    images none
+    last-update-time 2017-04-27:09:54:44
+    local-path none
+    mode 33188
+    partition Common
+    revision 1
+    size 62
+    templates none
+    type logout
+    updated-by admin
+}
+apm policy customization-group test_MAC_client_secure_access_client_customization {
+    app-service none
+    checksum SHA1:62:fd61541c1097d460e42c50904684def2794ba70d
+    create-time 2017-05-02:11:52:26
+    created-by admin
+    images none
+    last-update-time 2017-05-02:11:52:26
+    local-path none
+    mode 33188
+    partition Common
+    revision 1
+    size 62
+    templates none
+    type secure-access-client
+    updated-by admin
+}
+apm policy policy-item test-apm-ise-profile_act_external_logon_page {
+    agents {
+        test-apm-ise-profile_act_external_logon_page_ag {
+            type external-logon-page
+        }
+    }
+    app-service none
+    caption "External Logon Page"
+    color 1
+    item-type action
+    loop false
+    macro none
+    partition Common
+    rules {
+        {
+            caption fallback
+            expression none
+            next-item test-apm-ise-profile_end_allow
+        }
+    }
+}
+apm policy policy-item test-apm-ise-profile_act_irule_event {
+    agents {
+        test-apm-ise-profile_act_irule_event_ag {
+            type irule-event
+        }
+    }
+    app-service none
+    caption "ISE Attribute iRule Event"
+    color 1
+    item-type action
+    loop false
+    macro none
+    partition Common
+    rules {
+        {
+            caption fallback
+            expression none
+            next-item test-apm-ise-profile_act_external_logon_page
+        }
+    }
+}
+apm policy policy-item test-apm-ise-profile_act_logon_page {
+    agents {
+        test-apm-ise-profile_act_logon_page_ag {
+            type logon-page
+        }
+    }
+    app-service none
+    caption "Logon Page"
+    color 1
+    item-type action
+    loop false
+    macro none
+    partition Common
+    rules {
+        {
+            caption fallback
+            expression none
+            next-item test-apm-ise-profile_act_radius_auth
+        }
+    }
+}
+apm policy policy-item test-apm-ise-profile_act_radius_auth {
+    agents {
+        test-apm-ise-profile_act_radius_auth_ag {
+            type aaa-radius
+        }
+    }
+    app-service none
+    caption "RADIUS Auth - ISE Server"
+    color 1
+    item-type action
+    loop false
+    macro none
+    partition Common
+    rules {
+        {
+            caption Successful
+            expression "expr {[mcget {session.radius.last.result}] == 1}"
+            next-item test-apm-ise-profile_act_irule_event
+        }
+        {
+            caption fallback
+            expression none
+            next-item test-apm-ise-profile_end_deny
+        }
+    }
+}
+apm policy policy-item test-apm-ise-profile_end_allow {
+    agents {
+        test-apm-ise-profile_end_allow_ag {
+            type ending-allow
+        }
+    }
+    app-service none
+    caption Allow
+    color 1
+    item-type ending
+    loop false
+    macro none
+    partition Common
+    rules none
+}
+apm policy policy-item test-apm-ise-profile_end_deny {
+    agents {
+        test-apm-ise-profile_end_deny_ag {
+            type ending-deny
+        }
+    }
+    app-service none
+    caption Deny
+    color 2
+    item-type ending
+    loop false
+    macro none
+    partition Common
+    rules none
+}
+apm policy policy-item test-apm-ise-profile_ent {
+    agents none
+    app-service none
+    caption Start
+    color 1
+    item-type entry
+    loop false
+    macro none
+    partition Common
+    rules {
+        {
+            caption fallback
+            expression none
+            next-item test-apm-ise-profile_act_logon_page
+        }
+    }
+}
+apm profile access test-apm-ise-profile {
+    accept-languages { en }
+    access-policy test-apm-ise-profile
+    access-policy-timeout 300
+    app-service none
+    customization-group test-apm-ise-profile_logout
+    default-language en
+    defaults-from access
+    domain-cookie none
+    domain-groups none
+    domain-mode single-domain
+    eps-group test-apm-ise-profile_eps
+    errormap-group test-apm-ise-profile_errormap
+    exchange-profile none
+    framework-installation-group test-apm-ise-profile_frameworkinstallation
+    general-ui-group test-apm-ise-profile_general_ui
+    generation 14
+    generation-action noop
+    httponly-cookie false
+    inactivity-timeout 900
+    log-settings {
+        default-log-setting
+    }
+    logout-uri-include none
+    logout-uri-timeout 5
+    max-concurrent-sessions 0
+    max-concurrent-users 0
+    max-failure-delay 5
+    max-in-progress-sessions 128
+    max-session-timeout 604800
+    min-failure-delay 2
+    modified-since-last-policy-sync true
+    ntlm-auth-name none
+    partition Common
+    persistent-cookie false
+    primary-auth-service none
+    restrict-to-single-client-ip false
+    sandboxes none
+    scope profile
+    secure-cookie false
+    sso-name none
+    type all
+    use-http-503-on-error false
+    user-identity-method http
+}
+apm profile connectivity test_MAC_client {
+    adaptive-compression enabled
+    app-service none
+    citrix-client-bundle default-citrix-client-bundle
+    client-policy {
+        test_MAC_client_clientPolicy {
+            android-ec {
+                device-lock-method numeric
+                enable-mobilesafe false
+                enforce-device-lock true
+                enforce-logon-mode false
+                logon-mode native
+                max-inactivity-time 5
+                min-passcode-length 4
+                mobilesafe-server none
+                require-device-auth false
+                save-password false
+                save-password-method disk
+                save-password-timeout 240
+            }
+            android-ep {
+                device-lock-method numeric
+                enable-mobilesafe false
+                enforce-device-lock true
+                enforce-logon-mode false
+                logon-mode native
+                max-inactivity-time 5
+                min-passcode-length 4
+                mobilesafe-server none
+                save-password false
+                save-password-method disk
+                save-password-timeout 240
+            }
+            app-service none
+            location-specific false
+            servers none
+            chromeos-ec {
+                enforce-logon-mode false
+                logon-mode native
+                save-password false
+                save-password-method disk
+                save-password-timeout 240
+            }
+            ec {
+                component-update yes
+                location-dns none
+                reuse-winlogon-creds false
+                reuse-winlogon-session false
+                save-password false
+                save-password-method disk
+                save-password-timeout 240
+                save-servers-on-exit true
+            }
+            ios-ec {
+                enable-mobilesafe false
+                enforce-logon-mode false
+                logon-mode native
+                mobilesafe-server none
+                require-device-auth false
+                save-password false
+                save-password-method disk
+                save-password-timeout 240
+                vod-disconnect-timeout 2
+            }
+            ios-ep {
+                enable-mobilesafe false
+                enforce-logon-mode false
+                enforce-pin-lock true
+                logon-mode native
+                max-grace-period 2
+                mobilesafe-server none
+                save-password false
+                save-password-method disk
+                save-password-timeout 240
+            }
+        }
+    }
+    compress-buffer-size 4096
+    compress-cpu-saver true
+    compress-cpu-saver-high 90
+    compress-cpu-saver-low 75
+    compress-gzip-level 6
+    compress-gzip-memlevel 8192
+    compress-gzip-window-size 16384
+    compress-ingress false
+    compress-preferred-method zlib
+    compression enabled
+    compression-codecs { deflate lzo bzip2 }
+    customization-group test_MAC_client_secure_access_client_customization
+    defaults-from connectivity
+    deflate-compression-level 1
+    description none
+    fec-name fec
+    location-specific false
+    partition Common
+    tunnel-name test_MAC_client
+}
+apm report default-report {
+    app-service none
+    partition Common
+    report-name sessionReports/sessionSummary
+    user admin
+}
+auth password-policy {
+    description none
+    expiration-warning 7
+    max-duration 99999
+    max-login-failures 0
+    min-duration 0
+    minimum-length 6
+    password-memory 0
+    policy-enforcement disabled
+    required-lowercase 0
+    required-numeric 0
+    required-special 0
+    required-uppercase 0
+}
+auth remote-role {
+    description none
+    role-info none
+}
+auth remote-user {
+    default-partition all
+    default-role no-access
+    description none
+    remote-console-access disabled
+}
+auth source {
+    description none
+    type local
+}
+auth user admin {
+    description "Admin User"
+    encrypted-password $1$etSnsH2G$fClzAuGxpT/CZjkVye6a8/
+    partition Common
+    partition-access {
+        all-partitions {
+            role admin
+        }
+    }
+    shell tmsh
+}
+cli global-settings {
+    audit disabled
+    description none
+    idle-timeout disabled
+    scf-backup-number 2
+    service name
+}
+cli preference {
+    alias-path { /Common }
+    confirm-edit enabled
+    display-threshold 100
+    editor vi
+    history-date-time disabled
+    history-file-size 10000
+    history-size 500
+    keymap default
+    list-all-properties disabled
+    pager enabled
+    partition Common
+    prompt { host user status current-folder config-sync-status }
+    show-aliases enabled
+    show-imported-versions disabled
+    stat-units default
+    suppress-warnings none
+    table-indent-width 2
+    tcl-syntax-highlighting disabled
+    video enabled
+    warn bell
+}
+cm cert dtca-bundle.crt {
+    app-service none
+    certificate-key-size 2048
+    checksum SHA1:1302:bfe6e52ca2d80fa175651dd7a8c00e2500a7a4ed
+    create-time 2016-09-09:10:59:11
+    created-by root
+    email none
+    expiration-date 1788803951
+    expiration-string "Sep  7 17:59:11 2026 GMT"
+    fingerprint none
+    is-bundle false
+    issuer CN=fb7a6a74-0dd3-4113-9cb70023e9537fc1
+    key-type rsa-public
+    last-update-time 2016-09-09:10:59:11
+    mode 33188
+    partition Common
+    revision 10
+    serial-number 266331
+    size 1302
+    source-path none
+    subject CN=fb7a6a74-0dd3-4113-9cb70023e9537fc1
+    subject-alternative-name none
+    system-path none
+    updated-by root
+    version 3
+}
+cm cert dtca.crt {
+    app-service none
+    certificate-key-size 2048
+    checksum SHA1:1302:bfe6e52ca2d80fa175651dd7a8c00e2500a7a4ed
+    create-time 2016-09-09:10:59:11
+    created-by root
+    email none
+    expiration-date 1788803951
+    expiration-string "Sep  7 17:59:11 2026 GMT"
+    fingerprint none
+    is-bundle false
+    issuer CN=fb7a6a74-0dd3-4113-9cb70023e9537fc1
+    key-type rsa-public
+    last-update-time 2016-09-09:10:59:11
+    mode 33188
+    partition Common
+    revision 3
+    serial-number 266331
+    size 1302
+    source-path none
+    subject CN=fb7a6a74-0dd3-4113-9cb70023e9537fc1
+    subject-alternative-name none
+    system-path none
+    updated-by root
+    version 3
+}
+cm cert dtdi.crt {
+    app-service none
+    certificate-key-size 2048
+    checksum SHA1:1273:7514823693acb14cca9635f4de6f7ca77ec7202d
+    create-time 2016-09-09:10:59:11
+    created-by root
+    email none
+    expiration-date 1788803951
+    expiration-string "Sep  7 17:59:11 2026 GMT"
+    fingerprint none
+    is-bundle false
+    issuer CN=fb7a6a74-0dd3-4113-9cb70023e9537fc1
+    key-type rsa-public
+    last-update-time 2016-09-09:10:59:11
+    mode 33188
+    partition Common
+    revision 3
+    serial-number 561099
+    size 1273
+    source-path none
+    subject CN=bigip4200.f5.com
+    subject-alternative-name none
+    system-path none
+    updated-by root
+    version 3
+}
+cm device bigip4200.f5.com {
+    active-modules { "APM, Base CCU, 4200V|A651566-8887648|Anti-Virus Checks|Base Endpoint Security Checks|Firewall Checks|Machine Certificate Checks|Network Access|Protected Workspace|Secure Virtual Keyboard|APM, Web Application|App Tunnel|Remote Desktop|Application Acceleration Manager, Core" "LTM, Best Bundle, 4200V|H501585-2958465|DNSSEC|Max Compression|SDN Services|DNS Services (Unlimited)|Acceleration Manager|SSL, 4200V|ASM, Unlimited|AFM, 4000|LTM,BASE,GBB|IPV6 Gateway|Rate Shaping|Ram Cache|DNS Rate Fallback, Unlimited|DNS Licensed Objects, Unlimited|DNS Rate Limit, Unlimited QPS|GTM Rate Fallback, (UNLIMITED)|GTM Licensed Objects, Unlimited|GTM Rate, Unlimited|Routing Bundle|PSM" }
+    app-service none
+    base-mac 00:23:e9:53:7f:c0
+    build 0.93.249
+    cert dtdi.crt
+    chassis-id f5-fono-ozqd
+    chassis-type individual
+    comment none
+    configsync-ip 10.10.11.11
+    contact none
+    description none
+    edition "Engineering Hotfix"
+    failover-state active
+    ha-capacity 0
+    hostname bigip4200.f5.com
+    inactive-modules none
+    key dtdi.key
+    location none
+    management-ip 10.192.87.24
+    marketing-name "BIG-IP 4200"
+    mirror-ip 10.10.11.15
+    mirror-secondary-ip any6
+    multicast-interface none
+    multicast-ip any
+    multicast-port any
+    optional-modules { "Advanced Protocols" "APC, Introductory (2XXX/4XXX/5XXX)" "APC, Introductory to Medium UPG (2XXX/4XXX/5XXX)" "APC, Medium (2XXX/4XXX/5XXX)" "App Mode (TMSH Only, No Root/Bash)" "ASM, PSM to ASM Upgrade" "BIG-IP, Multicast Routing" "Concurrent Users" "External Interface and Network HSM" "IPI Subscription, 1Yr, 3900/4XXX/i4XXX" "IPI Subscription, 3Yr, 3900/4XXX/i4XXX" "Link Controller" "SSL, Forward Proxy" "SSL, Forward Proxy, 4XXX" "SWG 1Yr, 4XXX/i4XXX" "SWG 3Yr, 4XXX/i4XXX" "URL Filtering 1Yr, 4XXX/i4XXX" "URL Filtering 3Yr, 4XXX/I4XXX" }
+    partition Common
+    platform-id C113
+    product BIG-IP
+    self-device true
+    time-limited-modules none
+    time-zone America/Los_Angeles
+    unicast-address {
+        {
+            effective-ip 10.10.11.15
+            effective-port cap
+            ip 10.10.11.15
+            port cap
+        }
+        {
+            effective-ip management-ip
+            effective-port cap
+            ip management-ip
+            port cap
+        }
+    }
+    version 12.1.2
+}
+cm device-group device_trust_group {
+    app-service none
+    asm-sync disabled
+    auto-sync enabled
+    description none
+    devices {
+        bigip4200.f5.com { }
+    }
+    full-load-on-sync false
+    incremental-config-sync-size-max 1024
+    network-failover disabled
+    partition Common
+    save-on-auto-sync false
+    type sync-only
+}
+cm device-group gtm {
+    app-service none
+    asm-sync disabled
+    auto-sync disabled
+    description none
+    devices {
+        bigip4200.f5.com { }
+    }
+    full-load-on-sync false
+    incremental-config-sync-size-max 1024
+    network-failover disabled
+    partition Common
+    save-on-auto-sync false
+    type sync-only
+}
+cm key dtca.key {
+    app-service none
+    checksum SHA1:1704:397d1701b9992d802738b35f85fd3c3009b8129d
+    create-time 2016-09-09:10:59:11
+    created-by root
+    key-size 2048
+    key-type rsa-private
+    last-update-time 2016-09-09:10:59:11
+    mode 33184
+    partition Common
+    revision 3
+    security-type normal
+    size 1704
+    source-path none
+    system-path none
+    updated-by root
+}
+cm key dtdi.key {
+    app-service none
+    checksum SHA1:1704:4900de9516c61fd7df0354c7946c2b5e426256bf
+    create-time 2016-09-09:10:59:11
+    created-by root
+    key-size 2048
+    key-type rsa-private
+    last-update-time 2016-09-09:10:59:11
+    mode 33184
+    partition Common
+    revision 3
+    security-type normal
+    size 1704
+    source-path none
+    system-path none
+    updated-by root
+}
+cm traffic-group traffic-group-1 {
+    app-service none
+    auto-failback-enabled false
+    auto-failback-time 60
+    default-device none
+    description none
+    ha-group none
+    ha-load-factor 1
+    ha-order none
+    is-floating true
+    mac 00:00:de:ad:b3:3f
+    partition Common
+    unit-id 1
+}
+cm traffic-group traffic-group-local-only {
+    app-service none
+    auto-failback-enabled false
+    auto-failback-time 60
+    default-device none
+    description none
+    ha-group none
+    ha-load-factor 1
+    ha-order none
+    is-floating false
+    mac none
+    partition Common
+    unit-id 0
+}
+cm trust-domain Root {
+    app-service none
+    ca-cert dtca.crt
+    ca-cert-bundle dtca-bundle.crt
+    ca-devices { /Common/bigip4200.f5.com }
+    ca-key dtca.key
+    non-ca-devices none
+    partition Common
+    status standalone
+    trust-group device_trust_group
+}
+gtm datacenter sjc {
+    app-service none
+    contact none
+    description none
+    enabled
+    location none
+    metadata none
+    prober-pool none
+}
+gtm global-settings general {
+    auto-discovery yes
+    auto-discovery-interval 30
+    automatic-configuration-save-timeout 15
+    cache-ldns-servers yes
+    domain-name-check allow-underscore
+    drain-persistent-requests yes
+    forward-status disabled
+    gtm-sets-recursion no
+    heartbeat-interval 10
+    monitor-disabled-objects no
+    nethsm-timeout 20
+    peer-leader none
+    send-wildcard-rrs disabled
+    static-persist-cidr-ipv4 32
+    static-persist-cidr-ipv6 128
+    synchronization no
+    synchronization-group-name default
+    synchronization-time-tolerance 10
+    synchronization-timeout 180
+    synchronize-zone-files no
+    synchronize-zone-files-timeout 300
+    virtuals-depend-on-server-state yes
+}
+gtm global-settings load-balancing {
+    failure-rcode noerror
+    failure-rcode-response disabled
+    failure-rcode-ttl 0
+    ignore-path-ttl no
+    qos-factor-bps 1000000
+    qos-factor-hit-ratio 10000
+    qos-factor-hops 25
+    qos-factor-link-capacity 1
+    qos-factor-packet-rate 10000
+    qos-factor-rtt 10000
+    qos-factor-topology 10
+    qos-factor-vs-capacity 1
+    qos-factor-vs-score 1
+    respect-fallback-dependency no
+    topology-allow-zero-scores yes
+    topology-longest-match yes
+    verify-vs-availability yes
+}
+gtm global-settings metrics {
+    default-probe-limit 12
+    hops-packet-length 64
+    hops-sample-count 3
+    hops-timeout 3
+    hops-ttl 604800
+    inactive-ldns-ttl 2419200
+    inactive-paths-ttl 604800
+    ldns-update-interval 20
+    max-synchronous-monitor-requests 20
+    metrics-caching 3600
+    metrics-collection-protocols { icmp }
+    path-ttl 2400
+    paths-retry 120
+}
+gtm global-settings metrics-exclusions {
+    addresses none
+}
+gtm server test-host {
+    addresses {
+        10.192.87.31 {
+            app-service none
+            device-name /Common/test-host
+            explicit-link-name none
+            translation none
+        }
+    }
+    app-service none
+    datacenter sjc
+    description none
+    enabled
+    expose-route-domains no
+    iq-allow-path yes
+    iq-allow-service-check yes
+    iq-allow-snmp yes
+    limit-cpu-usage 0
+    limit-cpu-usage-status disabled
+    limit-max-bps 0
+    limit-max-bps-status disabled
+    limit-max-connections 0
+    limit-max-connections-status disabled
+    limit-max-pps 0
+    limit-max-pps-status disabled
+    limit-mem-avail 0
+    limit-mem-avail-status disabled
+    link-discovery disabled
+    metadata none
+    monitor gateway_icmp
+    prober-pool none
+    product single-bigip
+    virtual-server-discovery disabled
+    virtual-servers {
+        test-host-vm {
+            app-service none
+            description none
+            destination 10.192.87.31:http
+            enabled
+            explicit-link-name none
+            limit-max-bps 0
+            limit-max-bps-status disabled
+            limit-max-connections 0
+            limit-max-connections-status disabled
+            limit-max-pps 0
+            limit-max-pps-status disabled
+            ltm-name none
+            monitor gateway_icmp
+            translation-address none
+            translation-port any
+            depends-on none
+        }
+    }
+}
+ltm classification signature-definition {
+    last-attempt-automatic-mode disabled
+    last-attempt-datetime 1969-12-31:16:00:00
+    last-attempt-user none
+    last-update-automatic-mode disabled
+    last-update-datetime 1969-12-31:16:00:00
+    last-update-user none
+    message none
+    partition Common
+    progress-status none
+}
+ltm classification signature-update-schedule {
+    auto-update-disabled
+    auto-update-interval weekly
+    partition Common
+}
+ltm classification signature-version {
+    cec-filename none
+    cec-version none
+    classification-version none
+    conf-filename none
+    conf-version none
+    im-version none
+    partition Common
+    qm-protocols-filename none
+    qm-protocols-version none
+    updated-time 1969-12-31:16:00:00
+}
+ltm default-node-monitor {
+    rule none
+}
+ltm dns analytics global-settings {
+    collect-client-ip enabled
+    collect-query-name enabled
+}
+ltm dns cache global-settings {
+    cache-maximum-ttl 10d
+    cache-minimum-ttl 0
+    resolver-edns-buffer-size 4k
+}
+ltm global-settings connection {
+    adaptive-reaper-hiwater 95
+    adaptive-reaper-lowater 85
+    auto-last-hop enabled
+    global-flow-eviction-policy /Common/default-eviction-policy
+    syncookies-threshold 16384
+    vlan-keyed-conn enabled
+}
+ltm global-settings general {
+    gratuitous-arp-rate 0
+    l2-cache-timeout 300
+    maintenance-mode disabled
+    share-single-mac unique
+    snat-packet-forward disabled
+}
+ltm global-settings traffic-control {
+    accept-ip-options disabled
+    accept-ip-source-route disabled
+    allow-ip-source-route disabled
+    continue-matching disabled
+    max-icmp-rate 100
+    max-reject-rate 250
+    max-reject-rate-timeout 30
+    min-path-mtu 296
+    path-mtu-discovery enabled
+    port-find-linear 16
+    port-find-random 16
+    port-find-threshold-timeout 30
+    port-find-threshold-trigger 8
+    port-find-threshold-warning enabled
+    reject-unmatched enabled
+}
+ltm monitor icmp custom_icmp_monitor {
+    adaptive disabled
+    adaptive-divergence-type relative
+    adaptive-divergence-value 25
+    adaptive-limit 200
+    adaptive-sampling-timespan 300
+    app-service none
+    defaults-from icmp
+    description none
+    destination *
+    interval 4
+    manual-resume disabled
+    partition Common
+    time-until-up 0
+    timeout 13
+    transparent disabled
+    up-interval 0
+}
+ltm node 10.128.20.11 {
+    address 10.128.20.11
+    app-service none
+    connection-limit 0
+    description none
+    dynamic-ratio 1
+    ephemeral false
+    fqdn {
+        address-family ipv4
+        autopopulate disabled
+        down-interval 5
+        interval 3600
+        name none
+    }
+    logging disabled
+    metadata none
+    monitor none
+    partition Common
+    rate-limit disabled
+    ratio 1
+    session monitor-enabled
+    state unchecked
+}
+ltm node 10.128.20.12 {
+    address 10.128.20.12
+    app-service none
+    connection-limit 0
+    description none
+    dynamic-ratio 1
+    ephemeral false
+    fqdn {
+        address-family ipv4
+        autopopulate disabled
+        down-interval 5
+        interval 3600
+        name none
+    }
+    logging disabled
+    metadata none
+    monitor none
+    partition Common
+    rate-limit disabled
+    ratio 1
+    session monitor-enabled
+    state unchecked
+}
+ltm node 10.128.20.13 {
+    address 10.128.20.13
+    app-service none
+    connection-limit 0
+    description none
+    dynamic-ratio 1
+    ephemeral false
+    fqdn {
+        address-family ipv4
+        autopopulate disabled
+        down-interval 5
+        interval 3600
+        name none
+    }
+    logging disabled
+    metadata none
+    monitor none
+    partition Common
+    rate-limit disabled
+    ratio 1
+    session monitor-enabled
+    state unchecked
+}
+ltm node 10.192.86.159 {
+    address 10.192.86.159
+    app-service none
+    connection-limit 0
+    description none
+    dynamic-ratio 1
+    ephemeral false
+    fqdn {
+        address-family ipv4
+        autopopulate disabled
+        down-interval 5
+        interval 3600
+        name none
+    }
+    logging disabled
+    metadata none
+    monitor default
+    partition Common
+    rate-limit disabled
+    ratio 1
+    session user-enabled
+    state unchecked
+}
+ltm node 10.192.252.19 {
+    address 10.192.252.19
+    app-service none
+    connection-limit 0
+    description none
+    dynamic-ratio 1
+    ephemeral false
+    fqdn {
+        address-family ipv4
+        autopopulate disabled
+        down-interval 5
+        interval 3600
+        name none
+    }
+    logging disabled
+    metadata none
+    monitor default
+    partition Common
+    rate-limit disabled
+    ratio 1
+    session user-enabled
+    state unchecked
+}
+ltm node 10.192.252.55 {
+    address 10.192.252.55
+    app-service none
+    connection-limit 0
+    description none
+    dynamic-ratio 1
+    ephemeral false
+    fqdn {
+        address-family ipv4
+        autopopulate disabled
+        down-interval 5
+        interval 3600
+        name none
+    }
+    logging disabled
+    metadata none
+    monitor default
+    partition Common
+    rate-limit disabled
+    ratio 1
+    session user-enabled
+    state unchecked
+}
+ltm node 10.192.253.50 {
+    address 10.192.253.50
+    app-service none
+    connection-limit 0
+    description none
+    dynamic-ratio 1
+    ephemeral false
+    fqdn {
+        address-family ipv4
+        autopopulate disabled
+        down-interval 5
+        interval 3600
+        name none
+    }
+    logging disabled
+    metadata none
+    monitor default
+    partition Common
+    rate-limit disabled
+    ratio 1
+    session user-enabled
+    state unchecked
+}
+ltm node 10.192.253.77 {
+    address 10.192.253.77
+    app-service none
+    connection-limit 0
+    description none
+    dynamic-ratio 1
+    ephemeral false
+    fqdn {
+        address-family ipv4
+        autopopulate disabled
+        down-interval 5
+        interval 3600
+        name none
+    }
+    logging disabled
+    metadata none
+    monitor default
+    partition Common
+    rate-limit disabled
+    ratio 1
+    session user-enabled
+    state unchecked
+}
+ltm persistence global-settings {
+    description none
+    dest-addr-limit-mode timeout
+    dest-addr-max 2048
+    proxy-group /Common/aol
+}
+ltm profile web-acceleration optimized-caching {
+    app-service none
+    applications none
+    cache-aging-rate 9
+    cache-client-cache-control-mode all
+    cache-insert-age-header enabled
+    cache-max-age 86400
+    cache-max-entries 10000
+    cache-object-max-size 2000000
+    cache-object-min-size 0
+    cache-size 7mb
+    cache-uri-exclude none
+    cache-uri-include { .* }
+    cache-uri-include-override none
+    cache-uri-pinned none
+    defaults-from webacceleration
+    metadata-cache-max-size 25mb
+    partition Common
+}
+ltm profile web-acceleration webacceleration {
+    app-service none
+    applications none
+    cache-aging-rate 9
+    cache-client-cache-control-mode all
+    cache-insert-age-header enabled
+    cache-max-age 3600
+    cache-max-entries 10000
+    cache-object-max-size 50000
+    cache-object-min-size 500
+    cache-size 75mb
+    cache-uri-exclude none
+    cache-uri-include { .* }
+    cache-uri-include-override none
+    cache-uri-pinned none
+    defaults-from none
+    metadata-cache-max-size 25mb
+    partition Common
+}
+ltm rule dosTest {
+    app-service none
+    partition Common
+    when FLOW_INIT {
+    log local0. "Dos VIP hit"
+}
+
+when CLIENT_ACCEPTED {
+    log local0. "Dos VIP ACCEPT hit"
+}
+}
+ltm rule ise_event_irule {
+    app-service none
+    partition Common
+    when ACCESS_POLICY_AGENT_EVENT {
+   #set my_var [ACCESS::session data get session.radius.last.attr.vendor-specific.1.9.1]
+   #log local0.info "hit apm event"
+   #log local0.info "variable is $my_var"
+   if { [ACCESS::policy agent_id] eq "ISE_ATTR" } {
+      set my_var [ACCESS::session data get session.radius.last.attr.vendor-specific.1.9.1]
+      set my_string [lindex [split $my_var |] 1]
+      set my_url [string map {"url-redirect=" ""} $my_string]
+      log local0.info "hit apm event"
+      log local0.info "variable is $my_url"
+      ACCESS::session data set session.custom.ise_redirect $my_url
+   }
+}
+}
+ltm tacdb licenseddb licensed-tacdb {
+    last-sync-datetime 1969-12-31:16:00:00
+    partition none
+    poll-interval 0
+    progress-status not-loaded
+}
+ltm virtual l4forward {
+    address-status yes
+    app-service none
+    auth none
+    auto-lasthop default
+    bwc-policy none
+    clone-pools none
+    cmp-enabled yes
+    connection-limit 0
+    description none
+    destination 172.16.17.1:any
+    enabled
+    fallback-persistence none
+    flow-eviction-policy none
+    fw-enforced-policy none
+    fw-staged-policy none
+    gtm-score 0
+    ip-forward
+    ip-intelligence-policy none
+    ip-protocol any
+    last-hop-pool none
+    mask 255.255.255.255
+    metadata none
+    mirror disabled
+    mobile-app-tunnel disabled
+    nat64 disabled
+    partition Common
+    per-flow-request-access-policy none
+    persist none
+    policies none
+    pool none
+    profiles {
+        dosWebProtect {
+            context all
+        }
+        fastL4 {
+            context all
+        }
+    }
+    rate-class none
+    rate-limit disabled
+    rate-limit-dst-mask 0
+    rate-limit-mode object
+    rate-limit-src-mask 0
+    related-rules none
+    rules none
+    security-log-profiles none
+    security-nat-policy {
+        policy none
+        use-device-policy no
+        use-route-domain-policy no
+    }
+    service-down-immediate-action none
+    service-policy none
+    source 0.0.0.0/0
+    source-address-translation {
+        pool none
+        type none
+    }
+    source-port preserve
+    syn-cookie-status not-activated
+    traffic-classes none
+    translate-address disabled
+    translate-port disabled
+    urldb-feed-policy none
+    vlans none
+    vlans-disabled
+    vs-index 11
+}
+net cos global-settings {
+    default-map-8021p none
+    default-map-dscp none
+    default-traffic-priority none
+    feature-disabled
+    precedence 8021p-only
+}
+net dag-globals {
+    round-robin-mode global
+}
+net fdb tunnel http-tunnel {
+    app-service none
+    partition Common
+    records none
+}
+net fdb tunnel socks-tunnel {
+    app-service none
+    partition Common
+    records none
+}
+net fdb tunnel test_MAC_client {
+    app-service none
+    partition Common
+    records none
+}
+net fdb vlan vlan121 {
+    app-service none
+    partition Common
+    records none
+}
+net fdb vlan vlan221 {
+    app-service none
+    partition Common
+    records none
+}
+net fdb vlan vlan_252 {
+    app-service none
+    partition Common
+    records none
+}
+net fdb vlan vlan_253 {
+    app-service none
+    partition Common
+    records none
+}
+net interface 1.1 {
+    bundle not-supported
+    bundle-speed not-supported
+    description none
+    enabled
+    flow-control tx-rx
+    force-gigabit-fiber disabled
+    forward-error-correction not-supported
+    if-alias none
+    if-index 736
+    lldp-admin txrx
+    lldp-tlvmap 114552
+    mac-address 00:23:e9:53:7f:c2
+    media-active 1000T-FD
+    media-fixed auto
+    media-max 1000T-FD
+    media-sfp auto
+    module-description none
+    mtu 9198
+    prefer-port sfp
+    qinq-ethertype 0x8100
+    serial none
+    sflow {
+        poll-interval 0
+        poll-interval-global yes
+    }
+    stp enabled
+    stp-auto-edge-port enabled
+    stp-edge-port true
+    stp-link-type auto
+    vendor none
+    vendor-oui none
+    vendor-partnum none
+    vendor-revision none
+}
+net interface 1.2 {
+    bundle not-supported
+    bundle-speed not-supported
+    description none
+    enabled
+    flow-control tx-rx
+    force-gigabit-fiber disabled
+    forward-error-correction not-supported
+    if-alias none
+    if-index 752
+    lldp-admin txrx
+    lldp-tlvmap 114552
+    mac-address 00:23:e9:53:7f:c3
+    media-active 1000T-FD
+    media-fixed auto
+    media-max 1000T-FD
+    media-sfp auto
+    module-description none
+    mtu 9198
+    prefer-port sfp
+    qinq-ethertype 0x8100
+    serial none
+    sflow {
+        poll-interval 0
+        poll-interval-global yes
+    }
+    stp enabled
+    stp-auto-edge-port enabled
+    stp-edge-port true
+    stp-link-type auto
+    vendor none
+    vendor-oui none
+    vendor-partnum none
+    vendor-revision none
+}
+net interface 1.3 {
+    bundle not-supported
+    bundle-speed not-supported
+    description none
+    enabled
+    flow-control tx-rx
+    force-gigabit-fiber disabled
+    forward-error-correction not-supported
+    if-alias none
+    if-index 768
+    lldp-admin txonly
+    lldp-tlvmap 130943
+    mac-address 00:23:e9:53:7f:c4
+    media-active none
+    media-fixed auto
+    media-max 1000T-FD
+    media-sfp auto
+    module-description none
+    mtu 9198
+    prefer-port sfp
+    qinq-ethertype 0x8100
+    serial none
+    sflow {
+        poll-interval 0
+        poll-interval-global yes
+    }
+    stp enabled
+    stp-auto-edge-port enabled
+    stp-edge-port true
+    stp-link-type auto
+    vendor none
+    vendor-oui none
+    vendor-partnum none
+    vendor-revision none
+}
+net interface 1.4 {
+    bundle not-supported
+    bundle-speed not-supported
+    description none
+    enabled
+    flow-control tx-rx
+    force-gigabit-fiber disabled
+    forward-error-correction not-supported
+    if-alias none
+    if-index 784
+    lldp-admin txonly
+    lldp-tlvmap 130943
+    mac-address 00:23:e9:53:7f:c5
+    media-active none
+    media-fixed auto
+    media-max 1000T-FD
+    media-sfp auto
+    module-description none
+    mtu 9198
+    prefer-port sfp
+    qinq-ethertype 0x8100
+    serial none
+    sflow {
+        poll-interval 0
+        poll-interval-global yes
+    }
+    stp enabled
+    stp-auto-edge-port enabled
+    stp-edge-port true
+    stp-link-type auto
+    vendor none
+    vendor-oui none
+    vendor-partnum none
+    vendor-revision none
+}
+net interface 1.5 {
+    bundle not-supported
+    bundle-speed not-supported
+    description none
+    enabled
+    flow-control tx-rx
+    force-gigabit-fiber disabled
+    forward-error-correction not-supported
+    if-alias none
+    if-index 800
+    lldp-admin txonly
+    lldp-tlvmap 130943
+    mac-address 00:23:e9:53:7f:c6
+    media-active none
+    media-fixed auto
+    media-max 1000T-FD
+    media-sfp auto
+    module-description none
+    mtu 9198
+    prefer-port sfp
+    qinq-ethertype 0x8100
+    serial none
+    sflow {
+        poll-interval 0
+        poll-interval-global yes
+    }
+    stp enabled
+    stp-auto-edge-port enabled
+    stp-edge-port true
+    stp-link-type auto
+    vendor none
+    vendor-oui none
+    vendor-partnum none
+    vendor-revision none
+}
+net interface 1.6 {
+    bundle not-supported
+    bundle-speed not-supported
+    description none
+    enabled
+    flow-control tx-rx
+    force-gigabit-fiber disabled
+    forward-error-correction not-supported
+    if-alias none
+    if-index 816
+    lldp-admin txonly
+    lldp-tlvmap 130943
+    mac-address 00:23:e9:53:7f:c7
+    media-active none
+    media-fixed auto
+    media-max 1000T-FD
+    media-sfp auto
+    module-description none
+    mtu 9198
+    prefer-port sfp
+    qinq-ethertype 0x8100
+    serial none
+    sflow {
+        poll-interval 0
+        poll-interval-global yes
+    }
+    stp enabled
+    stp-auto-edge-port enabled
+    stp-edge-port true
+    stp-link-type auto
+    vendor none
+    vendor-oui none
+    vendor-partnum none
+    vendor-revision none
+}
+net interface 1.7 {
+    bundle not-supported
+    bundle-speed not-supported
+    description none
+    enabled
+    flow-control tx-rx
+    force-gigabit-fiber disabled
+    forward-error-correction not-supported
+    if-alias none
+    if-index 832
+    lldp-admin txonly
+    lldp-tlvmap 130943
+    mac-address 00:23:e9:53:7f:c8
+    media-active none
+    media-fixed auto
+    media-max 1000T-FD
+    media-sfp auto
+    module-description none
+    mtu 9198
+    prefer-port sfp
+    qinq-ethertype 0x8100
+    serial none
+    sflow {
+        poll-interval 0
+        poll-interval-global yes
+    }
+    stp enabled
+    stp-auto-edge-port enabled
+    stp-edge-port true
+    stp-link-type auto
+    vendor none
+    vendor-oui none
+    vendor-partnum none
+    vendor-revision none
+}
+net interface 1.8 {
+    bundle not-supported
+    bundle-speed not-supported
+    description none
+    enabled
+    flow-control tx-rx
+    force-gigabit-fiber disabled
+    forward-error-correction not-supported
+    if-alias none
+    if-index 848
+    lldp-admin txonly
+    lldp-tlvmap 130943
+    mac-address 00:23:e9:53:7f:c9
+    media-active none
+    media-fixed auto
+    media-max 1000T-FD
+    media-sfp auto
+    module-description none
+    mtu 9198
+    prefer-port sfp
+    qinq-ethertype 0x8100
+    serial none
+    sflow {
+        poll-interval 0
+        poll-interval-global yes
+    }
+    stp enabled
+    stp-auto-edge-port enabled
+    stp-edge-port true
+    stp-link-type auto
+    vendor none
+    vendor-oui none
+    vendor-partnum none
+    vendor-revision none
+}
+net interface 2.1 {
+    bundle not-supported
+    bundle-speed not-supported
+    description none
+    enabled
+    flow-control tx-rx
+    force-gigabit-fiber disabled
+    forward-error-correction not-supported
+    if-alias none
+    if-index 864
+    lldp-admin txonly
+    lldp-tlvmap 130943
+    mac-address 00:23:e9:53:7f:ca
+    media-active none
+    media-fixed auto
+    media-max 10000T-FD
+    media-sfp auto
+    module-description none
+    mtu 9198
+    prefer-port sfp
+    qinq-ethertype 0x8100
+    serial none
+    sflow {
+        poll-interval 0
+        poll-interval-global yes
+    }
+    stp enabled
+    stp-auto-edge-port enabled
+    stp-edge-port true
+    stp-link-type auto
+    vendor none
+    vendor-oui none
+    vendor-partnum none
+    vendor-revision none
+}
+net interface 2.2 {
+    bundle not-supported
+    bundle-speed not-supported
+    description none
+    enabled
+    flow-control tx-rx
+    force-gigabit-fiber disabled
+    forward-error-correction not-supported
+    if-alias none
+    if-index 880
+    lldp-admin txonly
+    lldp-tlvmap 130943
+    mac-address 00:23:e9:53:7f:cb
+    media-active none
+    media-fixed auto
+    media-max 10000T-FD
+    media-sfp auto
+    module-description none
+    mtu 9198
+    prefer-port sfp
+    qinq-ethertype 0x8100
+    serial none
+    sflow {
+        poll-interval 0
+        poll-interval-global yes
+    }
+    stp enabled
+    stp-auto-edge-port enabled
+    stp-edge-port true
+    stp-link-type auto
+    vendor none
+    vendor-oui none
+    vendor-partnum none
+    vendor-revision none
+}
+net interface mgmt {
+    bundle not-supported
+    bundle-speed not-supported
+    description none
+    enabled
+    flow-control tx-rx
+    force-gigabit-fiber disabled
+    forward-error-correction not-supported
+    if-alias none
+    if-index 80
+    lldp-admin txonly
+    lldp-tlvmap 130943
+    mac-address 00:23:e9:53:7f:c1
+    media-active 1000T-FD
+    media-fixed auto
+    media-max 1000T-FD
+    media-sfp auto
+    module-description none
+    mtu 1500
+    prefer-port sfp
+    qinq-ethertype 0x8100
+    serial none
+    sflow {
+        poll-interval 0
+        poll-interval-global yes
+    }
+    stp enabled
+    stp-auto-edge-port enabled
+    stp-edge-port true
+    stp-link-type auto
+    vendor none
+    vendor-oui none
+    vendor-partnum none
+    vendor-revision none
+}
+net ipsec ike-daemon ikedaemon {
+    description none
+    isakmp-natt-port ipsec-nat-t
+    isakmp-port isakmp
+    log-level info
+    log-publisher default-ipsec-log-publisher
+    natt-keep-alive 0
+}
+net lldp-globals {
+    enabled
+    max-neighbors-per-port 10
+    reinit-delay 2
+    tx-delay 2
+    tx-hold 4
+    tx-interval 30
+}
+net multicast-globals {
+    max-pending-packets 16
+    max-pending-routes 256
+    rate-limit enabled
+    route-lookup-timeout 2
+}
+net packet-filter-trusted {
+    description none
+    ip-addresses none
+    mac-addresses none
+    vlans none
+}
+net route webProtect {
+    description none
+    gw 172.16.16.19
+    mtu 0
+    network 172.16.17.1/32
+    partition Common
+}
+net route-domain 0 {
+    app-service none
+    bwc-policy none
+    connection-limit 0
+    description none
+    flow-eviction-policy none
+    fw-enforced-policy none
+    fw-staged-policy none
+    id 0
+    ip-intelligence-policy none
+    parent none
+    partition Common
+    routing-protocol none
+    security-nat-policy none
+    service-policy none
+    strict enabled
+    vlans {
+        vlan221
+        vlan221-121
+        http-tunnel
+        socks-tunnel
+        vlan_252
+        vlan_253
+        vlan121
+        VLAN252-253
+        test_MAC_client
+    }
+}
+net self 10.10.11.11 {
+    address 10.10.11.11/24
+    address-source from-user
+    allow-service {
+        default
+    }
+    app-service none
+    description none
+    floating disabled
+    fw-enforced-policy none
+    fw-staged-policy none
+    inherited-traffic-group false
+    partition Common
+    service-policy none
+    traffic-group traffic-group-local-only
+    unit 0
+    vlan vlan221-121
+}
+net self 10.10.11.20 {
+    address 10.10.11.20/24
+    address-source from-user
+    allow-service {
+        default
+    }
+    app-service none
+    description none
+    floating enabled
+    fw-enforced-policy none
+    fw-staged-policy none
+    inherited-traffic-group false
+    partition Common
+    service-policy none
+    traffic-group traffic-group-1
+    unit 1
+    vlan vlan221-121
+}
+net self 192.10.10.10 {
+    address 192.10.10.10/24
+    address-source from-user
+    allow-service none
+    app-service none
+    description none
+    floating disabled
+    fw-enforced-policy none
+    fw-staged-policy none
+    inherited-traffic-group false
+    partition Common
+    service-policy none
+    traffic-group traffic-group-local-only
+    unit 0
+    vlan vlan221-121
+}
+net self 10.10.11.15 {
+    address 10.10.11.15/24
+    address-source from-user
+    allow-service {
+        default
+    }
+    app-service none
+    description none
+    floating disabled
+    fw-enforced-policy none
+    fw-staged-policy none
+    inherited-traffic-group false
+    partition Common
+    service-policy none
+    traffic-group traffic-group-local-only
+    unit 0
+    vlan vlan221-121
+}
+net self vlan221-121 {
+    address 172.16.16.254/24
+    address-source from-user
+    allow-service all
+    app-service none
+    description none
+    floating disabled
+    fw-enforced-policy none
+    fw-staged-policy none
+    inherited-traffic-group false
+    partition Common
+    service-policy none
+    traffic-group traffic-group-local-only
+    unit 0
+    vlan vlan221-121
+}
+net self-allow {
+    defaults {
+        igmp:any
+        ospf:any
+        pim:any
+        tcp:domain
+        tcp:f5-iquery
+        tcp:https
+        tcp:snmp
+        tcp:ssh
+        udp:520
+        udp:cap
+        udp:domain
+        udp:f5-iquery
+        udp:snmp
+    }
+}
+net stp-globals {
+    config-name 00-23-E9-53-7F-C0
+    config-revision 0
+    description none
+    fwd-delay 15
+    hello-time 2
+    max-age 20
+    max-hops 20
+    mode passthru
+    transmit-hold 6
+}
+net tunnels tunnel http-tunnel {
+    app-service none
+    auto-lasthop default
+    description "Tunnel for http-explicit profile"
+    idle-timeout 300
+    if-index 912
+    key 0
+    local-address any6
+    mode bidirectional
+    mtu 0
+    partition Common
+    profile tcp-forward
+    remote-address any6
+    secondary-address any6
+    tos preserve
+    traffic-group none
+    transparent disabled
+    use-pmtu enabled
+}
+net tunnels tunnel socks-tunnel {
+    app-service none
+    auto-lasthop default
+    description "Tunnel for socks profile"
+    idle-timeout 300
+    if-index 928
+    key 0
+    local-address any6
+    mode bidirectional
+    mtu 0
+    partition Common
+    profile tcp-forward
+    remote-address any6
+    secondary-address any6
+    tos preserve
+    traffic-group none
+    transparent disabled
+    use-pmtu enabled
+}
+net tunnels tunnel test_MAC_client {
+    app-service none
+    auto-lasthop default
+    description none
+    idle-timeout 300
+    if-index 1008
+    key 0
+    local-address any6
+    mode bidirectional
+    mtu 0
+    partition Common
+    profile ppp
+    remote-address any6
+    secondary-address any6
+    tos preserve
+    traffic-group none
+    transparent disabled
+    use-pmtu enabled
+}
+net vlan vlan121 {
+    app-service none
+    auto-lasthop default
+    cmp-hash default
+    customer-tag none
+    dag-round-robin disabled
+    dag-tunnel outer
+    description none
+    failsafe disabled
+    failsafe-action failover-restart-tm
+    failsafe-timeout 90
+    if-index 1040
+    interfaces {
+        1.1 {
+            app-service none
+            tag-mode none
+            tagged
+        }
+    }
+    learning enable-forward
+    mtu 1500
+    partition Common
+    sflow {
+        poll-interval 0
+        poll-interval-global yes
+        sampling-rate 0
+        sampling-rate-global yes
+    }
+    source-checking disabled
+    tag 121
+}
+net vlan vlan221 {
+    app-service none
+    auto-lasthop default
+    cmp-hash default
+    customer-tag none
+    dag-round-robin disabled
+    dag-tunnel outer
+    description none
+    failsafe disabled
+    failsafe-action failover-restart-tm
+    failsafe-timeout 90
+    if-index 1056
+    interfaces {
+        1.2 {
+            app-service none
+            tag-mode none
+            tagged
+        }
+    }
+    learning enable-forward
+    mtu 1500
+    partition Common
+    sflow {
+        poll-interval 0
+        poll-interval-global yes
+        sampling-rate 0
+        sampling-rate-global yes
+    }
+    source-checking disabled
+    tag 221
+}
+net vlan vlan_252 {
+    app-service none
+    auto-lasthop default
+    cmp-hash default
+    customer-tag none
+    dag-round-robin disabled
+    dag-tunnel outer
+    description none
+    failsafe disabled
+    failsafe-action failover-restart-tm
+    failsafe-timeout 90
+    if-index 976
+    interfaces none
+    learning enable-forward
+    mtu 1500
+    partition Common
+    sflow {
+        poll-interval 0
+        poll-interval-global yes
+        sampling-rate 0
+        sampling-rate-global yes
+    }
+    source-checking disabled
+    tag 252
+}
+net vlan vlan_253 {
+    app-service none
+    auto-lasthop default
+    cmp-hash default
+    customer-tag none
+    dag-round-robin disabled
+    dag-tunnel outer
+    description none
+    failsafe disabled
+    failsafe-action failover-restart-tm
+    failsafe-timeout 90
+    if-index 992
+    interfaces none
+    learning enable-forward
+    mtu 1500
+    partition Common
+    sflow {
+        poll-interval 0
+        poll-interval-global yes
+        sampling-rate 0
+        sampling-rate-global yes
+    }
+    source-checking disabled
+    tag 253
+}
+net vlan-group VLAN252-253 {
+    app-service none
+    auto-lasthop default
+    bridge-in-standby disabled
+    bridge-multicast enabled
+    bridge-traffic disabled
+    description none
+    if-index 1024
+    members none
+    migration-keepalive disabled
+    mode translucent
+    partition Common
+    proxy-excludes none
+}
+net vlan-group vlan221-121 {
+    app-service none
+    auto-lasthop default
+    bridge-in-standby disabled
+    bridge-multicast enabled
+    bridge-traffic disabled
+    description none
+    if-index 1072
+    members {
+        vlan121
+        vlan221
+    }
+    migration-keepalive disabled
+    mode translucent
+    partition Common
+    proxy-excludes none
+}
+security device device-context {
+    description none
+    nat-policy none
+}
+security dos network-whitelist dos-network-whitelist {
+    address-list none
+    description none
+    entries none
+}
+security dos profile dosWebProtect {
+    app-service none
+    description none
+    dos-network {
+        dosWebProtect {
+            app-service none
+            network-attack-vector {
+                tcp-syn-flood {
+                    allow-advertisement disabled
+                    app-service none
+                    auto-blacklisting disabled
+                    bad-actor disabled
+                    blacklist-category none
+                    blacklist-detection-seconds 60
+                    blacklist-duration 14400
+                    packet-types none
+                    per-source-ip-detection-pps 1
+                    per-source-ip-limit-pps 2
+                    rate-increase 100
+                    rate-limit 2147483647
+                    rate-threshold 2
+                }
+            }
+        }
+    }
+    partition Common
+    protocol-dns none
+    protocol-sip none
+    whitelist none
+}
+security dos udp-portlist dos-udp-portlist {
+    description none
+    entries none
+    list-type exclude-listed-ports
+}
+security firewall config-change-log {
+    log-changes automatic
+    log-publisher local-db-publisher
+}
+security firewall global-fqdn-policy {
+    description none
+    dns-resolver none
+    refresh-interval 60
+}
+security firewall global-rules {
+    description none
+    enforced-policy none
+    service-policy none
+    staged-policy none
+}
+security firewall management-ip-rules {
+    description none
+    rules none
+}
+security firewall on-demand-compilation {
+    mode disabled
+}
+security firewall on-demand-rule-deploy {
+    mode disabled
+}
+security firewall port-list _sys_self_allow_tcp_defaults {
+    app-service none
+    description none
+    partition Common
+    port-lists none
+    ports {
+        1029-1043 {
+            app-service none
+            description none
+        }
+        domain {
+            app-service none
+            description none
+        }
+        f5-iquery {
+            app-service none
+            description none
+        }
+        https {
+            app-service none
+            description none
+        }
+        snmp {
+            app-service none
+            description none
+        }
+        ssh {
+            app-service none
+            description none
+        }
+    }
+}
+security firewall port-list _sys_self_allow_udp_defaults {
+    app-service none
+    description none
+    partition Common
+    port-lists none
+    ports {
+        520 {
+            app-service none
+            description none
+        }
+        cap {
+            app-service none
+            description none
+        }
+        domain {
+            app-service none
+            description none
+        }
+        f5-iquery {
+            app-service none
+            description none
+        }
+        snmp {
+            app-service none
+            description none
+        }
+    }
+}
+security firewall rule-list _sys_self_allow_all {
+    app-service none
+    description none
+    partition Common
+    rules {
+        _sys_allow_all {
+            action accept
+            app-service none
+            description none
+            ip-protocol any
+            irule none
+            irule-sample-rate 1
+            log no
+            schedule none
+            service-policy none
+            status enabled
+            destination {
+                address-lists none
+                addresses none
+                fqdns none
+                geo none
+                port-lists none
+                ports none
+            }
+            icmp none
+            source {
+                address-lists none
+                addresses none
+                fqdns none
+                geo none
+                identity {
+                    user-groups none
+                    user-lists none
+                    users none
+                }
+                port-lists none
+                ports none
+                vlans none
+            }
+        }
+    }
+}
+security firewall rule-list _sys_self_allow_defaults {
+    app-service none
+    description none
+    partition Common
+    rules {
+        _sys_allow_tcp_defaults {
+            action accept
+            app-service none
+            description none
+            ip-protocol tcp
+            irule none
+            irule-sample-rate 1
+            log no
+            schedule none
+            service-policy none
+            status enabled
+            destination {
+                address-lists none
+                addresses none
+                fqdns none
+                geo none
+                port-lists {
+                    _sys_self_allow_tcp_defaults
+                }
+                ports none
+            }
+            icmp none
+            source {
+                address-lists none
+                addresses none
+                fqdns none
+                geo none
+                identity {
+                    user-groups none
+                    user-lists none
+                    users none
+                }
+                port-lists none
+                ports none
+                vlans none
+            }
+        }
+        _sys_allow_udp_defaults {
+            action accept
+            app-service none
+            description none
+            ip-protocol udp
+            irule none
+            irule-sample-rate 1
+            log no
+            schedule none
+            service-policy none
+            status enabled
+            destination {
+                address-lists none
+                addresses none
+                fqdns none
+                geo none
+                port-lists {
+                    _sys_self_allow_udp_defaults
+                }
+                ports none
+            }
+            icmp none
+            source {
+                address-lists none
+                addresses none
+                fqdns none
+                geo none
+                identity {
+                    user-groups none
+                    user-lists none
+                    users none
+                }
+                port-lists none
+                ports none
+                vlans none
+            }
+        }
+        _sys_allow_ospf_defaults {
+            action accept
+            app-service none
+            description none
+            ip-protocol ospf
+            irule none
+            irule-sample-rate 1
+            log no
+            schedule none
+            service-policy none
+            status enabled
+            destination {
+                address-lists none
+                addresses none
+                fqdns none
+                geo none
+                port-lists none
+                ports none
+            }
+            icmp none
+            source {
+                address-lists none
+                addresses none
+                fqdns none
+                geo none
+                identity {
+                    user-groups none
+                    user-lists none
+                    users none
+                }
+                port-lists none
+                ports none
+                vlans none
+            }
+        }
+        _sys_allow_pim_defaults {
+            action accept
+            app-service none
+            description none
+            ip-protocol pim
+            irule none
+            irule-sample-rate 1
+            log no
+            schedule none
+            service-policy none
+            status enabled
+            destination {
+                address-lists none
+                addresses none
+                fqdns none
+                geo none
+                port-lists none
+                ports none
+            }
+            icmp none
+            source {
+                address-lists none
+                addresses none
+                fqdns none
+                geo none
+                identity {
+                    user-groups none
+                    user-lists none
+                    users none
+                }
+                port-lists none
+                ports none
+                vlans none
+            }
+        }
+        _sys_allow_igmp_defaults {
+            action accept
+            app-service none
+            description none
+            ip-protocol igmp
+            irule none
+            irule-sample-rate 1
+            log no
+            schedule none
+            service-policy none
+            status enabled
+            destination {
+                address-lists none
+                addresses none
+                fqdns none
+                geo none
+                port-lists none
+                ports none
+            }
+            icmp none
+            source {
+                address-lists none
+                addresses none
+                fqdns none
+                geo none
+                identity {
+                    user-groups none
+                    user-lists none
+                    users none
+                }
+                port-lists none
+                ports none
+                vlans none
+            }
+        }
+    }
+}
+security firewall rule-list _sys_self_allow_management {
+    app-service none
+    description none
+    partition Common
+    rules {
+        _sys_allow_ssh {
+            action accept
+            app-service none
+            description none
+            ip-protocol tcp
+            irule none
+            irule-sample-rate 1
+            log no
+            schedule none
+            service-policy none
+            status enabled
+            destination {
+                address-lists none
+                addresses none
+                fqdns none
+                geo none
+                port-lists none
+                ports {
+                    ssh {
+                        app-service none
+                        description none
+                    }
+                }
+            }
+            icmp none
+            source {
+                address-lists none
+                addresses none
+                fqdns none
+                geo none
+                identity {
+                    user-groups none
+                    user-lists none
+                    users none
+                }
+                port-lists none
+                ports none
+                vlans none
+            }
+        }
+        _sys_allow_web {
+            action accept
+            app-service none
+            description none
+            ip-protocol tcp
+            irule none
+            irule-sample-rate 1
+            log no
+            schedule none
+            service-policy none
+            status enabled
+            destination {
+                address-lists none
+                addresses none
+                fqdns none
+                geo none
+                port-lists none
+                ports {
+                    https {
+                        app-service none
+                        description none
+                    }
+                }
+            }
+            icmp none
+            source {
+                address-lists none
+                addresses none
+                fqdns none
+                geo none
+                identity {
+                    user-groups none
+                    user-lists none
+                    users none
+                }
+                port-lists none
+                ports none
+                vlans none
+            }
+        }
+    }
+}
+security ip-intelligence global-policy {
+    description none
+    ip-intelligence-policy none
+    partition Common
+}
+security ip-intelligence policy ip-intelligence {
+    app-service none
+    blacklist-categories none
+    default-action drop
+    default-log-blacklist-hit-only no
+    default-log-blacklist-whitelist-hit no
+    description none
+    feed-lists none
+    partition Common
+}
+security log profile logAll {
+    app-service none
+    description none
+    dos-network-publisher local_syslog_pub
+    ip-intelligence {
+        aggregate-rate 4294967295
+        log-publisher none
+        log-rtbh disabled
+        log-shun disabled
+        log-translation-fields disabled
+    }
+    nat {
+        end-inbound-session disabled
+        end-outbound-session {
+            action disabled
+            elements none
+        }
+        errors disabled
+        log-publisher none
+        lsn-legacy-mode disabled
+        quota-exceeded disabled
+        start-inbound-session disabled
+        start-outbound-session {
+            action disabled
+            elements none
+        }
+    }
+    network {
+        logAll {
+            app-service none
+            publisher local-db-publisher
+            filter {
+                log-acl-match-accept disabled
+                log-acl-match-drop disabled
+                log-acl-match-reject disabled
+                log-acl-to-box-deny disabled
+                log-geo-always disabled
+                log-ip-errors disabled
+                log-tcp-errors disabled
+                log-tcp-events disabled
+                log-translation-fields disabled
+            }
+            format {
+                field-list none
+                field-list-delimiter ,
+                type none
+                user-defined none
+            }
+            rate-limit {
+                acl-match-accept 4294967295
+                acl-match-drop 4294967295
+                acl-match-reject 4294967295
+                aggregate-rate 4294967295
+                ip-errors 4294967295
+                tcp-errors 4294967295
+                tcp-events 4294967295
+            }
+        }
+    }
+    partition Common
+    port-misuse {
+        aggregate-rate 4294967295
+        log-publisher none
+    }
+    protocol-dns {
+        logAll {
+            app-service none
+            publisher none
+            filter {
+                log-dns-drop disabled
+                log-dns-filtered-drop disabled
+                log-dns-malformed disabled
+                log-dns-malicious disabled
+                log-dns-reject disabled
+            }
+            format {
+                field-list none
+                field-list-delimiter ,
+                type none
+                user-defined none
+            }
+        }
+    }
+    protocol-dns-dos-publisher local-db-publisher
+    protocol-sip {
+        logAll {
+            app-service none
+            publisher none
+            filter {
+                log-sip-drop disabled
+                log-sip-global-failures disabled
+                log-sip-malformed disabled
+                log-sip-redirection-responses disabled
+                log-sip-request-failures disabled
+                log-sip-server-errors disabled
+            }
+            format {
+                field-list none
+                field-list-delimiter ,
+                type none
+                user-defined none
+            }
+        }
+    }
+    protocol-sip-dos-publisher local-db-publisher
+    protocol-transfer {
+        logAll {
+            app-service none
+            publisher none
+        }
+    }
+    ssh-proxy none
+    traffic-statistics {
+        active-flows disabled
+        log-publisher local-db-publisher
+        missed-flows disabled
+        reaped-flows disabled
+        syncookies disabled
+        syncookies-whitelist disabled
+    }
+}
+security log profile wester_sec_log {
+    app-service none
+    description none
+    dos-network-publisher none
+    ip-intelligence {
+        aggregate-rate 4294967295
+        log-publisher none
+        log-rtbh disabled
+        log-shun disabled
+        log-translation-fields disabled
+    }
+    nat {
+        end-inbound-session enabled
+        end-outbound-session {
+            action enabled
+            elements none
+        }
+        errors disabled
+        log-publisher local_syslog_pub
+        lsn-legacy-mode disabled
+        quota-exceeded disabled
+        start-inbound-session enabled
+        start-outbound-session {
+            action enabled
+            elements none
+        }
+    }
+    network none
+    partition Common
+    port-misuse {
+        aggregate-rate 4294967295
+        log-publisher none
+    }
+    protocol-dns none
+    protocol-dns-dos-publisher none
+    protocol-sip none
+    protocol-sip-dos-publisher none
+    protocol-transfer none
+    ssh-proxy none
+    traffic-statistics {
+        active-flows disabled
+        log-publisher none
+        missed-flows disabled
+        reaped-flows disabled
+        syncookies disabled
+        syncookies-whitelist disabled
+    }
+}
+security nat policy snat_test {
+    app-service none
+    description none
+    partition Common
+    rules {
+        test_snat_50_10 {
+            app-service none
+            description none
+            ip-protocol any
+            log-profile wester_sec_log
+            status enabled
+            destination {
+                address-lists none
+                addresses none
+                port-lists none
+                ports none
+            }
+            source {
+                address-lists none
+                addresses {
+                    10.192.253.0/24 {
+                        app-service none
+                        description none
+                    }
+                }
+                port-lists none
+                ports none
+                vlans none
+            }
+            translation {
+                destination none
+                source fifty_test_snat
+            }
+        }
+    }
+}
+security nat source-translation fifty_test_snat {
+    addresses {
+        10.192.252.0/24 {
+            app-service none
+            description none
+        }
+    }
+    app-service none
+    backup-addresses none
+    client-connection-limit 0
+    description none
+    egress-interfaces {
+        vlan_252
+        vlan_253
+    }
+    egress-interfaces-enabled
+    hairpin-mode disabled
+    icmp-echo enabled
+    inbound-mode none
+    mapping {
+        mode address-pooling-paired
+        timeout 300
+    }
+    partition Common
+    pat-mode napt
+    port-block-allocation {
+        block-idle-timeout 3600
+        block-lifetime 0
+        block-size 64
+        client-block-limit 1
+        zombie-timeout 0
+    }
+    ports none
+    type static-nat
+}
+sys aom {
+    ipmi disabled
+    media-redirection disabled
+    readonly disabled
+    vkvm disabled
+    webui disabled
+}
+sys autoscale-group {
+    autoscale-group-id none
+    description none
+}
+sys daemon-log-settings clusterd {
+    log-level notice
+}
+sys daemon-log-settings csyncd {
+    log-level notice
+}
+sys daemon-log-settings icrd {
+    audit modifications
+}
+sys daemon-log-settings lind {
+    log-level notice
+}
+sys daemon-log-settings mcpd {
+    audit enabled
+    log-level notice
+}
+sys daemon-log-settings tmm {
+    arp-log-level warning
+    http-compression-log-level error
+    http-log-level error
+    ip-log-level warning
+    irule-log-level informational
+    layer4-log-level notice
+    net-log-level warning
+    os-log-level notice
+    pva-log-level informational
+    ssl-log-level warning
+}
+sys datastor {
+    cache-size 0
+    dedup-cache-weight 10
+    description none
+    disk enabled
+    high-water-mark 90
+    low-water-mark 80
+    store-size 0
+    web-cache-weight 10
+}
+sys disk application-volume afmdata {
+    logical-disk HD1
+    owner afm
+    preservability precious
+    resizeable false
+    size 3900
+    volume-set-visibility-restraint none
+}
+sys disk application-volume avrdata {
+    logical-disk HD1
+    owner avr
+    preservability precious
+    resizeable false
+    size 3900
+    volume-set-visibility-restraint none
+}
+sys disk application-volume mysqldb_HD1.1 {
+    logical-disk HD1
+    owner mysql
+    preservability precious
+    resizeable false
+    size 12288
+    volume-set-visibility-restraint HD1.1
+}
+sys disk application-volume mysqldb_HD1.2 {
+    logical-disk HD1
+    owner mysql
+    preservability precious
+    resizeable false
+    size 12288
+    volume-set-visibility-restraint HD1.2
+}
+sys disk application-volume mysqldb_HD1.3 {
+    logical-disk HD1
+    owner mysql
+    preservability precious
+    resizeable false
+    size 12288
+    volume-set-visibility-restraint HD1.3
+}
+sys disk application-volume mysqldb_HD1.4 {
+    logical-disk HD1
+    owner mysql
+    preservability precious
+    resizeable false
+    size 12288
+    volume-set-visibility-restraint HD1.4
+}
+sys disk application-volume mysqldb_HD1.5 {
+    logical-disk HD1
+    owner mysql
+    preservability precious
+    resizeable false
+    size 12288
+    volume-set-visibility-restraint HD1.5
+}
+sys disk logical-disk HD1 {
+    mode mixed
+    size 476940
+    vg-free 318416
+    vg-in-use 156988
+    vg-reserved 30720
+}
+sys dns {
+    description none
+    include none
+    name-servers none
+    number-of-dots 0
+    search { localhost }
+}
+sys ecm cloud-provider aws-ec2 {
+    app-service none
+    description "The aws-ec2 parameters"
+    partition Common
+    property-template {
+        account {
+            app-service none
+            valid-values none
+        }
+        availability-zone {
+            app-service none
+            valid-values { a b c d }
+        }
+        instance-type {
+            app-service none
+            valid-values { t2.micro t2.small t2.medium m3.medium m3.large m3.xlarge m3.2xlarge c3.large c3.xlarge c3.2xlarge c3.4xlarge c3.8xlarge r3.large r3.xlarge r3.2xlarge r3.4xlarge r3.8xlarge }
+        }
+        region {
+            app-service none
+            valid-values { us-east-1 us-west-1 us-west-2 sa-east-1 eu-west-1 eu-central-1 ap-southeast-2 ap-southeast-1 ap-northeast-1 }
+        }
+    }
+}
+sys ecm cloud-provider dnet {
+    app-service none
+    description "The dnet parameters"
+    partition Common
+    property-template none
+}
+sys ecm cloud-provider vsphere {
+    app-service none
+    description "The vsphere parameters"
+    partition Common
+    property-template {
+        cloud-host-ip {
+            app-service none
+            valid-values none
+        }
+        dhcp-network-name {
+            app-service none
+            valid-values none
+        }
+        end-point-url {
+            app-service none
+            valid-values none
+        }
+        node-name {
+            app-service none
+            valid-values none
+        }
+    }
+}
+sys ecm config {
+    auth none
+    cloud-provider none
+    cloud-provider-properties none
+    dns-resolver none
+    hosts-ip none
+    hosts-port none
+    image-download-url none
+    image-name none
+    image-path none
+    last-command none
+    max-num-nodes 0
+    partition Common
+    password none
+    seed-ip ecm.f5aas.com
+    ssl-key-pair-name ecm-ssl-key
+    status none
+    transport-manager-max-connections 0
+    user-name none
+}
+sys feature-module cgnat {
+    description none
+    disabled
+}
+sys folder Drafts {
+    app-service none
+    description none
+    device-group none
+    hidden false
+    inherited-devicegroup true
+    inherited-traffic-group true
+    no-ref-check false
+    traffic-group traffic-group-1
+}
+sys folder EPSEC {
+    app-service none
+    description none
+    device-group none
+    hidden false
+    inherited-devicegroup true
+    inherited-traffic-group true
+    no-ref-check false
+    traffic-group traffic-group-1
+}
+sys fpga firmware-config {
+    type standard-balanced-fpga
+}
+sys global-settings {
+    aws-access-key none
+    aws-api-max-concurrency 1
+    aws-secret-key none
+    console-inactivity-timeout 0
+    custom-addr none
+    description none
+    failsafe-action go-offline-restart-tm
+    file-blacklist-path-prefix "{/shared/3dns/} {/shared/bin/} {/shared/core/} {/shared/datasync/} {/shared/em/} {/shared/GeoIP/} {/shared/images/} {/shared/lib/} {/shared/lib64/} {/shared/log/} {/shared/lost+found/} {/shared/mgmt/} {/shared/nfb/} {/shared/ssh/} {/shared/statsd/} {/shared/tmstat/} {/shared/vadc/} {/config/aaa/} {/config/big3d/} {/config/bigip/} {/config/filestore/} {/config/gtm/} {/config/httpd/} {/config/ntp.conf} {/config/rndc.key} {/config/ssh/} {/config/ssl/}"
+    file-blacklist-read-only-path-prefix "{/etc/shadow}"
+    file-local-path-prefix "{/shared/} {/tmp/}"
+    file-whitelist-path-prefix "{/var/local/scf} {/tmp/} {/shared/} {/config/}"
+    gui-security-banner enabled
+    gui-security-banner-text "Welcome to the BIG-IP Configuration Utility for SJC SE Lab device.
+The environement is intended for F5 Networks SJC SEs only."
+    gui-setup disabled
+    host-addr-mode management
+    hostname bigip4200.f5.com
+    hosts-allow-include none
+    lcd-display enabled
+    led-locator disabled
+    mgmt-dhcp disabled
+    net-reboot disabled
+    password-prompt Password
+    quiet-boot enabled
+    remote-host none
+    username-prompt Username
+}
+sys httpd {
+    allow { All }
+    auth-name BIG-IP
+    auth-pam-dashboard-timeout off
+    auth-pam-idle-timeout 10000
+    auth-pam-validate-ip on
+    description none
+    fastcgi-timeout 300
+    fips-cipher-version 0
+    hostname-lookup off
+    include none
+    log-level warn
+    max-clients 10
+    redirect-http-to-https disabled
+    request-body-max-timeout 0
+    request-body-min-rate 500
+    request-body-timeout 60
+    request-header-max-timeout 40
+    request-header-min-rate 500
+    request-header-timeout 20
+    ssl-ca-cert-file none
+    ssl-certchainfile none
+    ssl-certfile /etc/httpd/conf/ssl.crt/server.crt
+    ssl-certkeyfile /etc/httpd/conf/ssl.key/server.key
+    ssl-ciphersuite ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:AES128-GCM-SHA256:AES256-GCM-SHA384:AES128-SHA:AES256-SHA:AES128-SHA256:AES256-SHA256:ECDHE-RSA-DES-CBC3-SHA:ECDHE-ECDSA-DES-CBC3-SHA:DES-CBC3-SHA
+    ssl-include none
+    ssl-ocsp-default-responder http://127.0.0.1
+    ssl-ocsp-enable off
+    ssl-ocsp-override-responder off
+    ssl-ocsp-responder-timeout 300
+    ssl-ocsp-response-max-age -1
+    ssl-ocsp-response-time-skew 300
+    ssl-port 443
+    ssl-protocol "all -SSLv2 -SSLv3"
+    ssl-verify-client no
+    ssl-verify-depth 10
+}
+sys icontrol-soap {
+    allow { All }
+}
+sys log-config publisher local_syslog_pub {
+    app-service none
+    description none
+    destinations {
+        local-syslog { }
+    }
+}
+sys log-rotate {
+    common-backlogs 24
+    common-include none
+    description none
+    include none
+    max-file-size 1024000
+    mysql-include none
+    syslog-include none
+    tomcat-include none
+    wa-include none
+}
+sys management-dhcp sys-mgmt-dhcp-config {
+    client-id none
+    description none
+    hostname none
+    request-options { subnet-mask broadcast-address routers domain-name domain-name-servers host-name ntp-servers }
+    send-options none
+}
+sys management-ip 10.192.87.24/24 {
+    app-service none
+    description none
+}
+sys management-ovsdb {
+    ca-cert-file none
+    cert-file none
+    cert-key-file none
+    controller-addresses none
+    description none
+    disabled
+    log-level info
+    port 6640
+    tunnel-local-address any6
+}
+sys management-route default {
+    app-service none
+    description none
+    gateway 10.192.87.1
+    mtu 0
+    network default
+}
+sys ntp {
+    description none
+    include none
+    restrict none
+    servers { 10.192.252.19 }
+    timezone America/Los_Angeles
+}
+sys outbound-smtp {
+    description none
+    mailhub localhost
+}
+sys provision afm {
+    cpu-ratio 0
+    description none
+    disk-ratio 0
+    level nominal
+    memory-ratio 0
+}
+sys provision apm {
+    cpu-ratio 0
+    description none
+    disk-ratio 0
+    level nominal
+    memory-ratio 0
+}
+sys provision avr {
+    cpu-ratio 0
+    description none
+    disk-ratio 0
+    level nominal
+    memory-ratio 0
+}
+sys provision gtm {
+    cpu-ratio 0
+    description none
+    disk-ratio 0
+    level nominal
+    memory-ratio 0
+}
+sys provision ilx {
+    cpu-ratio 0
+    description none
+    disk-ratio 0
+    level minimum
+    memory-ratio 0
+}
+sys provision ltm {
+    cpu-ratio 0
+    description none
+    disk-ratio 0
+    level nominal
+    memory-ratio 0
+}
+sys scriptd {
+    log-level debug
+    max-script-run-time 300
+}
+sys sflow global-settings http {
+    description none
+    poll-interval 10
+    sampling-rate 1024
+}
+sys sflow global-settings interface {
+    description none
+    poll-interval 10
+}
+sys sflow global-settings system {
+    description none
+    poll-interval 10
+}
+sys sflow global-settings vlan {
+    description none
+    poll-interval 10
+    sampling-rate 2048
+}
+sys snmp {
+    agent-addresses { tcp6:161 udp6:161 }
+    agent-trap enabled
+    allowed-addresses { 127. }
+    auth-trap disabled
+    bigip-traps enabled
+    communities {
+        comm-public {
+            access ro
+            community-name public
+            description none
+            ipv6 disabled
+            oid-subset none
+            source default
+        }
+    }
+    description none
+    disk-monitors {
+        root {
+            description none
+            minspace 2000
+            minspace-type size
+            path /
+        }
+        var {
+            description none
+            minspace 10000
+            minspace-type size
+            path /var
+        }
+    }
+    include none
+    l2forward-vlan
+    load-max1 12
+    load-max5 12
+    load-max15 12
+    process-monitors {
+        bigd {
+            description none
+            max-processes 1
+            min-processes 1
+            process bigd
+        }
+        chmand {
+            description none
+            max-processes 1
+            min-processes 1
+            process chmand
+        }
+        httpd {
+            description none
+            max-processes infinity
+            min-processes 1
+            process httpd
+        }
+        mcpd {
+            description none
+            max-processes 1
+            min-processes 1
+            process mcpd
+        }
+        sod {
+            description none
+            max-processes 1
+            min-processes 1
+            process sod
+        }
+        tmm {
+            description none
+            max-processes infinity
+            min-processes 1
+            process tmm
+        }
+    }
+    snmpv1 enable
+    snmpv2c enable
+    sys-contact "Customer Name <admin@customer.com>"
+    sys-location "Network Closet 1"
+    sys-services 78
+    trap-community public
+    trap-source none
+    traps none
+    users none
+    v1-traps none
+    v2-traps none
+}
+sys software hotfix Hotfix-BIGIP-11.5.1.6.0.159-HF6.iso {
+    build 6.0.159
+    checksum 38330c3d07d45a6a9bfcb030c0e897d2
+    id HF6
+    product BIG-IP
+    title "Hotfix Version 6.0.159"
+    verified yes
+    version 11.5.1
+}
+sys software hotfix Hotfix-BIGIP-12.1.1.1.0.196-HF1.iso {
+    build 1.0.196
+    checksum a4461ec1567f7c2738b52d65ac6fd1d4
+    id HF1
+    product BIG-IP
+    title "Hotfix Version 1.0.196"
+    verified yes
+    version 12.1.1
+}
+sys software hotfix Hotfix-BIGIP-12.1.2.0.93.249-ENG.iso {
+    build 0.93.249
+    checksum 10d2d69a372bfbe4a70ebead3f4a521d
+    id HF0-ENG93
+    product BIG-IP
+    title "Engineering Hotfix Version 0.93.249"
+    verified yes
+    version 12.1.2
+}
+sys software image BIGIP-11.2.1.797.0.iso {
+    build 797.0
+    build-date "Thu Sep 20 09 35 47 PDT 2012"
+    checksum 9b3db46f3ce4e70f91b8939347f1fcb5
+    file-size "1148 MB"
+    last-modified "Thu Mar 20 19:54:35 2014"
+    product BIG-IP
+    verified yes
+    version 11.2.1
+}
+sys software image BIGIP-11.5.0.0.0.221.iso {
+    build 0.0.221
+    build-date "Fri Jan 17 15 53 04 PST 2014"
+    checksum 46af4d562aede867a06cfcd2754576ca
+    file-size "1843 MB"
+    last-modified "Thu Mar 20 19:55:28 2014"
+    product BIG-IP
+    verified yes
+    version 11.5.0
+}
+sys software image BIGIP-11.5.1.0.0.110.iso {
+    build 0.0.110
+    build-date "Wed Mar 12 15 44 53 PDT 2014"
+    checksum a62722a865c60b65136d11de4aa7aef5
+    file-size "1845 MB"
+    last-modified "Thu Sep  8 15:36:52 2016"
+    product BIG-IP
+    verified yes
+    version 11.5.1
+}
+sys software image BIGIP-12.1.1.0.0.184.iso {
+    build 0.0.184
+    build-date "Thu Aug 11 17 09 01 PDT 2016"
+    checksum 2f89a4667b8651e2e1f28a569e5c0742
+    file-size "1997 MB"
+    last-modified "Thu Sep  8 15:01:50 2016"
+    product BIG-IP
+    verified yes
+    version 12.1.1
+}
+sys software image BIGIP-12.1.2.0.0.249.iso {
+    build 0.0.249
+    build-date "Wed Nov 30 16 04 00 PST 2016"
+    checksum 1b2bd1b0ae5e41e225b4ceea705f74e7
+    file-size "2012 MB"
+    last-modified "Thu Mar 30 10:01:36 2017"
+    product BIG-IP
+    verified yes
+    version 12.1.2
+}
+sys software update {
+    auto-check enabled
+    auto-phonehome enabled
+    check-status none
+    errors 0
+    frequency weekly
+}
+sys software update-status EUD {
+    app-service none
+    available none
+    check-user root
+    label "End User Diagnostics (EUD) Software Version"
+    last-checked 2017-08-03:17:54:39
+    last-checked-auto-mode enabled
+    last-checked-version 2.8.0.24.0
+    progress-status none
+    supplement none
+    url "Software is up-to-date."
+    url-supplement none
+}
+sys software update-status GEOLOC-ISP {
+    app-service none
+    available ip-geolocation-v2-2.0.0-20170731.267.0
+    check-user root
+    label "Geo Location ISP Data"
+    last-checked 2017-08-03:17:54:39
+    last-checked-auto-mode enabled
+    last-checked-version 2.0.0-20161006.233.0
+    progress-status available
+    supplement none
+    url https://downloads.f5.com/esd/ecc.sv\?sw=BIG-IP&pro=big-ip_v12.x&ver=12.1.2&container=GeoLocationUpdates
+    url-supplement none
+}
+sys software update-status GEOLOC-Region2 {
+    app-service none
+    available ip-geolocation-v2-2.0.0-20170731.267.0
+    check-user root
+    label "Geo Location Region2 (Worldwide) Data"
+    last-checked 2017-08-03:17:54:39
+    last-checked-auto-mode enabled
+    last-checked-version 2.0.0-20161006.233.0
+    progress-status available
+    supplement none
+    url https://downloads.f5.com/esd/ecc.sv\?sw=BIG-IP&pro=big-ip_v12.x&ver=12.1.2&container=GeoLocationUpdates
+    url-supplement none
+}
+sys software update-status GEOLOC-v6 {
+    app-service none
+    available ip-geolocation-v2-2.0.0-20170731.267.0
+    check-user root
+    label "Geo Location v6 Data"
+    last-checked 2017-08-03:17:54:39
+    last-checked-auto-mode enabled
+    last-checked-version 2.0.0-20161006.233.0
+    progress-status available
+    supplement none
+    url https://downloads.f5.com/esd/ecc.sv\?sw=BIG-IP&pro=big-ip_v12.x&ver=12.1.2&container=GeoLocationUpdates
+    url-supplement none
+}
+sys software update-status OPSWAT {
+    app-service none
+    available none
+    check-user root
+    label "EPSEC Software Version"
+    last-checked 2017-08-03:17:54:39
+    last-checked-auto-mode enabled
+    last-checked-version 1.0.0-450.0
+    progress-status none
+    supplement none
+    url "Software is up-to-date."
+    url-supplement none
+}
+sys software update-status RELEASE {
+    app-service none
+    available none
+    check-user root
+    label "BIG-IP Version"
+    last-checked 2017-08-03:17:54:39
+    last-checked-auto-mode enabled
+    last-checked-version 12.1.2.0.93.249
+    progress-status available
+    supplement Hotfix-BIGIP-12.1.2.1.0.271-HF1.iso
+    url "Software is up-to-date."
+    url-supplement https://downloads.f5.com/esd/ecc.sv\?sw=BIG-IP&pro=big-ip_v12.x&ver=12.1.2&container=Hotfix-BIGIP-12.1.2.1.0.271-HF1
+}
+sys software volume HD1.1 {
+    active
+    active-requested
+    basebuild 0.0.249
+    build 0.93.249
+    edition none
+    media {
+        HD1.1 {
+            default-boot-location
+            media hd
+            size default
+        }
+    }
+    product BIG-IP
+    status complete
+    version 12.1.2
+}
+sys software volume HD1.2 {
+    basebuild 0.0.110
+    build 0.0.110
+    edition none
+    media {
+        HD1.2 {
+            media hd
+            size default
+        }
+    }
+    product BIG-IP
+    status complete
+    version 11.5.1
+}
+sys software volume HD1.3 {
+    basebuild 0.0.184
+    build 0.0.184
+    edition none
+    media {
+        HD1.3 {
+            media hd
+            size default
+        }
+    }
+    product BIG-IP
+    status complete
+    version 12.1.1
+}
+sys software volume HD1.4 {
+    basebuild 0.0.110
+    build 6.0.159
+    edition none
+    media {
+        HD1.4 {
+            media hd
+            size default
+        }
+    }
+    product BIG-IP
+    status complete
+    version 11.5.1
+}
+sys software volume HD1.5 {
+    basebuild 0.0.184
+    build 1.0.196
+    edition none
+    media {
+        HD1.5 {
+            media hd
+            size default
+        }
+    }
+    product BIG-IP
+    status complete
+    version 12.1.1
+}
+sys sshd {
+    allow { ALL }
+    banner disabled
+    banner-text none
+    description none
+    fips-cipher-version 0
+    inactivity-timeout 0
+    include none
+    log-level info
+    login enabled
+    port 22
+}
+sys state-mirroring {
+    addr 10.10.11.15
+    peer-addr none
+    secondary-addr none
+    secondary-peer-addr none
+    state enabled
+}
+sys syslog {
+    auth-priv-from notice
+    auth-priv-to emerg
+    clustered-host-slot enabled
+    clustered-message-slot disabled
+    console-log enabled
+    cron-from warning
+    cron-to emerg
+    daemon-from notice
+    daemon-to emerg
+    description none
+    include none
+    iso-date disabled
+    kern-from debug
+    kern-to emerg
+    local6-from notice
+    local6-to emerg
+    mail-from notice
+    mail-to emerg
+    messages-from notice
+    messages-to warning
+    remote-servers none
+    user-log-from notice
+    user-log-to emerg
+}
+sys url-db download-schedule urldb {
+    app-service none
+    description none
+    download-now false
+    end-time 3:00
+    partition Common
+    start-time 1:00
+    status true
+}
